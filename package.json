@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "@types/cookie-parser": "^1.4.7",
-    "@types/cors": "^2.8.17"
+    "@types/cors": "^2.8.17",
+    "globals": "^15.9.0"
   }
 }
