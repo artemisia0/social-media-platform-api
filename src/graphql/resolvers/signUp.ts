@@ -5,6 +5,7 @@ import User from '../../mongooseModels/User'
 interface ArgsType {
 	username: string;
 	password: string;
+	birthDate: string;
 }
 
 export default async function signUp(_: any, args: ArgsType) {
@@ -24,7 +25,11 @@ export default async function signUp(_: any, args: ArgsType) {
 		process.exit(1)
 	}
 	const hashedPassword = await bcrypt.hash(password, Number.parseFloat(saltRounds!))
-	const newUser = new User({ username, hashedPassword })
+	const newUser = new User({
+		username,
+		hashedPassword,
+		birthDate: args.birthDate,
+	})
 	try {
 		await newUser.save()
 	} catch (err: any) {

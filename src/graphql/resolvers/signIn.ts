@@ -1,6 +1,6 @@
 import bcrypt from 'bcrypt'
 import User from '../../mongooseModels/User'
-import { getSessionToken } from '../../lib/session'
+import { getSessionToken, getSessionData } from '../../lib/session'
 
 
 interface ArgsType {

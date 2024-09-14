@@ -8,8 +8,9 @@ const resolvers = {
 	DateTime: DateTimeResolver,
 	//Subscription: {
 	//},
-	//Query: {
-	//},
+	Query: {
+		hello: () => "Hello World!",
+	},
 	Mutation: {
 		signIn,
 		signUp,

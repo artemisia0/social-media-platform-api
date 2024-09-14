@@ -3,12 +3,13 @@ scalar DateTime
 #type Subscription {
 #}
 
-#type Query {
-#}
+type Query {
+  hello: String!
+}
 
 type Mutation {
 	signIn(username: String!, password: String!): SignInResponse!
-	signUp(username: String!, password: String!): SignUpResponse!
+	signUp(username: String!, password: String!, birthDate: String!): SignUpResponse!
 	signOut: SignOutResponse!
 }
 
