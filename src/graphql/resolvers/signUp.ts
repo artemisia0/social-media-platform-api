@@ -29,6 +29,7 @@ export default async function signUp(_: any, args: ArgsType) {
 		username,
 		hashedPassword,
 		birthDate: args.birthDate,
+		signingUpDate: (new Date()).toISOString(),
 	})
 	try {
 		await newUser.save()

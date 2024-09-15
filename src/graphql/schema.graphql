@@ -4,13 +4,24 @@ scalar DateTime
 #}
 
 type Query {
-  hello: String!
+  userData(username: String!): UserDataResponse!
 }
 
 type Mutation {
 	signIn(username: String!, password: String!): SignInResponse!
 	signUp(username: String!, password: String!, birthDate: String!): SignUpResponse!
 	signOut: SignOutResponse!
+}
+
+type UserDataResponse {
+  status: Status!
+  result: UserDataResult
+}
+
+type UserDataResult {
+  username: String!
+  signingUpDate: String
+  birthDate: String
 }
 
 type SignUpResponse {
