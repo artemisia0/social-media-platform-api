@@ -9,6 +9,7 @@ interface Args {
 	countryCode: string | null | undefined;
 	countryLabel: string | null | undefined;
 	city: string | null | undefined;
+	avatar: string | null | undefined;
 }
 
 export default async function editProfile(_: any, args: Args) {
@@ -19,6 +20,7 @@ export default async function editProfile(_: any, args: Args) {
 		countryCode: args.countryCode ?? undefined,
 		countryLabel: args.countryLabel ?? undefined,
 		city: args.city ?? undefined,
+		avatar: args.avatar ?? undefined,
 	})
 
 	if (res.ok == false) {

@@ -12,7 +12,7 @@ type Mutation {
 	signUp(username: String!, password: String!, birthDate: String!): WithStatus!
 	signOut: SignOutResponse!
 
-  editProfile(username: String!, birthDate: String, firstName: String, lastName: String, countryCode: String, countryLabel: String, city: String): WithStatus!
+  editProfile(username: String!, birthDate: String, firstName: String, lastName: String, countryCode: String, countryLabel: String, city: String, avatar: String): WithStatus!
 }
 
 type UserDataResponse {
@@ -29,6 +29,7 @@ type UserData{
   countryCode: String
   countryLabel: String
   city: String
+  avatar: String
 }
 
 type WithStatus {

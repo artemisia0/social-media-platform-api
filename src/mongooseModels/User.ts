@@ -11,6 +11,7 @@ const userSchema = new mongoose.Schema({
 	countryCode: String,
 	countryLabel: String,
 	city: String,
+	avatar: String,
 })
 
 const User = mongoose.models.User ?? mongoose.model('User', userSchema)
