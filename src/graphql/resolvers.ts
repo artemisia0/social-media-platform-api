@@ -3,6 +3,7 @@ import signUp from './resolvers/signUp'
 import signOut from './resolvers/signOut'
 import { DateTimeResolver } from 'graphql-scalars'
 import userData from './resolvers/userData'
+import editProfile from './resolvers/editProfile'
 
 
 const resolvers = {
@@ -16,6 +17,7 @@ const resolvers = {
 		signIn,
 		signUp,
 		signOut,
+		editProfile,
 	}
 }
 

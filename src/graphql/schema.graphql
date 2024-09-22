@@ -9,22 +9,29 @@ type Query {
 
 type Mutation {
 	signIn(username: String!, password: String!): SignInResponse!
-	signUp(username: String!, password: String!, birthDate: String!): SignUpResponse!
+	signUp(username: String!, password: String!, birthDate: String!): WithStatus!
 	signOut: SignOutResponse!
+
+  editProfile(username: String!, birthDate: String, firstName: String, lastName: String, countryCode: String, countryLabel: String, city: String): WithStatus!
 }
 
 type UserDataResponse {
   status: Status!
-  result: UserDataResult
+  result: UserData
 }
 
-type UserDataResult {
+type UserData{
   username: String!
   signingUpDate: String
-  birthDate: String
+  birthDate: String!
+  firstName: String
+  lastName: String
+  countryCode: String
+  countryLabel: String
+  city: String
 }
 
-type SignUpResponse {
+type WithStatus {
   status: Status!
 }
 

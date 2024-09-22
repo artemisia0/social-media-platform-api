@@ -6,6 +6,11 @@ const userSchema = new mongoose.Schema({
 	hashedPassword: String,
 	birthDate: String,
 	signingUpDate: String,
+	firstName: String,
+	lastName: String,
+	countryCode: String,
+	countryLabel: String,
+	city: String,
 })
 
 const User = mongoose.models.User ?? mongoose.model('User', userSchema)
