@@ -4,6 +4,7 @@ import signOut from './resolvers/signOut'
 import { DateTimeResolver } from 'graphql-scalars'
 import userData from './resolvers/userData'
 import editProfile from './resolvers/editProfile'
+import postsData from './resolvers/postsData'
 
 
 const resolvers = {
@@ -12,6 +13,7 @@ const resolvers = {
 	//},
 	Query: {
 		userData,
+		postsData,
 	},
 	Mutation: {
 		signIn,

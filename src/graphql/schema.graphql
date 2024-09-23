@@ -5,6 +5,7 @@ scalar DateTime
 
 type Query {
   userData(username: String!): UserDataResponse!
+  postsData(username: String!): PostsDataResponse!
 }
 
 type Mutation {
@@ -18,6 +19,19 @@ type Mutation {
 type UserDataResponse {
   status: Status!
   result: UserData
+}
+
+type PostsDataResponse {
+  status: Status!
+  result: [PostData!]!
+}
+
+type PostData {
+  _id: String!
+  authorUsername: String!
+  images: [String!]!
+  usersWhoLiked: [String!]!
+  createdAt: String!
 }
 
 type UserData{
