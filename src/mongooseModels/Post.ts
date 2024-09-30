@@ -3,9 +3,10 @@ import mongoose from 'mongoose';
 
 const postSchema = new mongoose.Schema({
 	images: [String],
+	texts: [String],
 	authorUsername: String,
 	createdAt: String,
-	usersWhoLikes: [String],
+	usersWhoLiked: [String],
 });
 
 const Post = mongoose.models.Post ?? mongoose.model('Post', postSchema)

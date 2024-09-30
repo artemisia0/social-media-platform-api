@@ -5,6 +5,7 @@ import { DateTimeResolver } from 'graphql-scalars'
 import userData from './resolvers/userData'
 import editProfile from './resolvers/editProfile'
 import postsData from './resolvers/postsData'
+import createPost from './resolvers/createPost'
 
 
 const resolvers = {
@@ -20,6 +21,7 @@ const resolvers = {
 		signUp,
 		signOut,
 		editProfile,
+		createPost,
 	}
 }
 

@@ -6,7 +6,7 @@ interface Args {
 }
 
 export default async function postsData(_: any, args: Args) {
-	const posts = await Post.find({ username: args.username })
+	const posts = await Post.find({ authorUsername: args.username })
 		.sort({ createdAt: -1 })
 
 	return {

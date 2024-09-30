@@ -14,6 +14,8 @@ type Mutation {
 	signOut: SignOutResponse!
 
   editProfile(username: String!, birthDate: String, firstName: String, lastName: String, countryCode: String, countryLabel: String, city: String, avatar: String): WithStatus!
+
+  createPost(texts: [String!]!, images: [String!]!, authorUsername: String!): WithStatus!
 }
 
 type UserDataResponse {
@@ -30,6 +32,7 @@ type PostData {
   _id: String!
   authorUsername: String!
   images: [String!]!
+  texts: [String!]!
   usersWhoLiked: [String!]!
   createdAt: String!
 }
