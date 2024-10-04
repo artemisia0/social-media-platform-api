@@ -7,6 +7,7 @@ type Query {
   usersData: [UserData!]!
   userData(username: String!): UserDataResponse!
   postsData(username: String!): PostsDataResponse!
+  allPostsData: PostsDataResponse!
 }
 
 type Mutation {

@@ -7,6 +7,7 @@ import editProfile from './resolvers/editProfile'
 import postsData from './resolvers/postsData'
 import createPost from './resolvers/createPost'
 import usersData from './resolvers/usersData'
+import allPostsData from './resolvers/allPostsData'
 
 
 const resolvers = {
@@ -17,6 +18,7 @@ const resolvers = {
 		userData,
 		postsData,
 		usersData,
+		allPostsData,
 	},
 	Mutation: {
 		signIn,
